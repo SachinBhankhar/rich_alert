@@ -53,13 +53,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   alertSubtitle: richSubtitle("Subtitle"),
                   alertType: RichAlertType.WARNING,
                   actions: <Widget>[
-                    FlatButton(
-                       child: Text("OK"),
-                       onPressed: (){Navigator.pop(context);},
+                    TextButton(
+                      child: Text("OK"),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                     ),
-                    FlatButton(
-                       child: Text("Cancel"),
-                       onPressed: (){Navigator.pop(context);},
+                    TextButton(
+                      child: Text("Cancel"),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                     ),
                   ],
                 );

@@ -165,9 +165,12 @@ class _RichAlertDialogState extends State<RichAlertDialog> {
   Container _defaultAction(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      child: RaisedButton(
-        elevation: 2.0,
-        color: _typeColor[widget.alertType],
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor:
+              MaterialStateProperty.all(_typeColor[widget.alertType]),
+          elevation: MaterialStateProperty.all(2.0),
+        ),
         child: Text(
           "GOT IT",
           style: TextStyle(color: Colors.white),
